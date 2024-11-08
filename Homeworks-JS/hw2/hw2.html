@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<script>
+    //Масиви та об'єкти
+
+    // #67kfznmiMl
+    //- Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
+
+    let arr;
+    arr = [123, 567, 876, 578, 62, 44, 33, 1050, 66, 77]
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+    console.log(arr[4]);
+    console.log(arr[5]);
+    console.log(arr[6]);
+    console.log(arr[7]);
+    console.log(arr[8]);
+    console.log(arr[9]);
+    console.log(arr.length);
+
+
+    //#LARqoUj5I
+    //- Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
+    let book1 = {title: 'Смарагдовий вівторок', pageCount: 43, genre: 'Любовні романи'}
+    let book2 = {title: 'Тінь ворона', pageCount: 368, genre: 'Любовні романи'}
+    let book3 = {title: 'Кіт Мохіто', pageCount: 28, genre: 'Дитяча література'}
+
+    console.log(book1);
+    console.log(book2);
+    console.log(book3);
+
+    //#sA3Gg1sCp
+    // Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.
+    let book1a = {
+        title: 'Смарагдовий вівторок',
+        pageCount: 43,
+        genre: 'Любовні романи',
+        authors: [{name: `Міа Натан`, age: 43}]
+    }
+
+    let book2b = {
+        title: 'Тінь ворона',
+        pageCount: 368,
+        genre: 'Любовні романи',
+        authors: [{name: `Лаванда Різ`, age: 45}]
+    }
+
+    let book3v = {
+        title: 'Кіт Мохіто',
+        pageCount: 28,
+        genre: 'Дитяча література',
+        authors: [{name: `Жарікова Ольга`, age: 43}]
+    }
+    console.log(book1a);
+    console.log(book2b);
+    console.log(book3v);
+
+    //#jCHFnEbdmFd
+    //- Створити масив з 10 об'єктами які описують сутніcть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
+    let user1 = {name: `qwe`, username: `@rty`, password: `tyuiop89`};
+    let user2 = {name: 'sdf', username: 'sff', password: 'asdfg678'};
+    let user3 = {name: 'fhj', username: 'ghj', password: 'dfghjk34'}
+    let user4 = {name: 'hk.yy', username: 'jkl', password: 'hfjghjk34'}
+    let user5 = {name: 'cghst', username: 'cvb', password: 'yifghjk34'}
+    let user6 = {name: 'trytu', username: 'wer', password: 'jfftopi34'}
+    let user7 = {name: 'aryey', username: 'iop', password: 'dfvlhllhjk34'}
+    let user8 = {name: 'e4y', username: 'cgcj', password: '79gikuhjk34'}
+    let user9 = {name: 'ryuy', username: 'fkll', password: 'hjmfggkhljk34'}
+    let user10 = {name: 'ryyyyyyp', username: 'gyi', password: '484ghjk34'}
+
+    console.log(user1.password)
+    console.log(user2.password)
+    console.log(user3.password)
+    console.log(user4.password)
+    console.log(user5.password)
+    console.log(user6.password)
+    console.log(user7.password)
+    console.log(user8.password)
+    console.log(user9.password)
+    console.log(user10.password)
+
+    //#coYydZuaeEB
+    //- описати масив, в якому буде зберігатись інформація про температуру вранці,
+    // вдень і ввечері за термін в 7 днів. Як зробити цей масив
+    // - вам потрібно подумати. Нормальних варіантів опису - 2.
+    // Варіант, коли в вас буде одновимірний масив з 21 значенням виключаємо одразу
+    const weekTemperature = [
+        {day: 'Monday', morning: 10, afternoon: 18, evening: 14},
+        {day: 'Tuesday', morning: 15, afternoon: 10, evening: 10},
+        {day: 'Wednesday', morning: 10, afternoon: 11, evening: 10},
+        {day: 'Thursday', morning: 19, afternoon: 20, evening: 10},
+        {day: 'Friday', morning: 15, afternoon: 16, evening: 15},
+        {day: 'Saturday', morning: 25, afternoon: 30, evening: 15},
+        {day: 'Sunday', morning: 16, afternoon: 18, evening: 16}
+
+    ];
+
+    weekTemperature.forEach(weekTemperature => {
+        console.log(weekTemperature.morning);
+    });
+
+    //#bAUsaq6LI
+    //- Є змінна х, якій ви надаєте довільне числове значення.
+    //   Якщо змінна x не дорівнює нулю, виведіть 'Вірно',
+    //  інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
+
+    let x = +prompt('enter number 1, 0, -3');
+    if (x !== 0) {
+        console.log('right');
+    } else {
+        console.log('wrong');
+    }
+
+    // #3ckURgvs
+    // - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить,
+    // до якої четверті години попадає число
+    // (в першу, другу, третю или четверту частину години).
+
+    let time = +prompt('enter time = 25')
+
+    if (time >= 0 && time <= 14) {
+        console.log('First quarter of the hour');
+    } else if (time >= 15 && time <= 29) {
+        console.log('Second quarter of the hour');
+    } else if (time >= 30 && time <= 44) {
+        console.log(`Third quarter of the hour`);
+    } else if (time >= 45 && time <= 59) {
+        console.log(`Fourth quarter of the hour`);
+    } else {
+        console.log(`Invalid time value`)
+    }
+
+    // #UMoNq4biWGe
+    // - У змінній day дано якесь число від 1 до 31. Потрібно визначити,
+    //     у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
+
+
+    let day = +prompt(`Enter day`)
+
+    if (day >=1 && day <=10){
+        console.log(`First day <= 20){
+        console.log(\`Second decade`);
+    } else if (day >= 11 && day <= 20){
+        console.log(`Second decade`);
+    } else if (day >=21 && day <=31){
+        console.log(`Third decade`);
+    } else {
+        console.log(`Invalid day value`)
+    }
+
+
+    //
+    // #KzrtqyQ
+    // - Скласти розклад на тиждень за допомоги switch.
+    //     Користувач вводить порядковий номер дня тижня і на екрані відображається інфа
+    //     що заплановано на цей день (можна замість плану на день, назву дня англійською).
+
+    let Week = prompt(`Enter day`)
+
+switch (Week){
+
+    case `Monday`:
+        console.log(`Breakfast for the family, feeding the dog and cat, helping son get ready for school`);
+        console.log(`Household chores, shopping walking the dog`);
+        console.log(`Preparing lunch, meetings or other household task`);
+        console.log(`Helping son with homework, light walk with the dog`);
+        console.log(`Training at the OKTEN programming school)`);
+        break;
+
+    case 'Tuesday':
+        console.log(`Breakfast, feeding the pets, helping son get ready`);
+        console.log(`Dog walk, cat care, household tasks`);
+        console.log(`Personal time or hobbies, lunch`);
+        console.log(`Spending time with son - crafts or reading`);
+        console.log(`Training at the OKTEN programming school)`);
+        break;
+
+    case `Wednesday`:
+        console.log(`Breakfast, feeding the dog and cat, son's school prep`);
+        console.log(`Household chores, laundry, dog walk`);
+        console.log(`Preparing  lunch, free time`);
+        console.log(`Development with son - helping with a project or learning activity`);
+        console.log(`Training at the OKTEN programming school`);
+        break;
+
+    case `Thursday`:
+        console.log(`Breakfast, feeding the dog and cat, getting ready`);
+        console.log(`Dog walk, cat care, household chores`);
+        console.log(`Lunch, personal time of reading`);
+        console.log(`Outdoor time with son or playtime`);
+        console.log(`Training at the OKTEN programming school`);
+        break;
+
+    case `Friday`:
+        console.log(`Breakfast, feeding  the pets, son's school prep`);
+        console.log(`Dog walk weekend shopping, cat  care`);
+        console.log(`Light lunch, weekend preparation, tidying up`);
+        console.log(`Family games or shared activities `);
+        console.log(`Training at the OKTEN programming school`);
+        break;
+
+    case `Saturday`:
+        console.log(`Leisurely breakfast with the family, feeding pets, walking the dog.`);
+        console.log(`Family walk or visit to the park, shopping for household goods.`);
+        console.log(`Preparation of a delicious lunch, time for family communication`);
+        console.log(`Fun activities with your son (cycling, sports) or personal time.`);
+        console.log(`Training at the OKTEN programming school`);
+        break;
+
+    case `Sunday`:
+        console.log(`Family breakfast, feeding the dog and cat, light housework`);
+        console.log(`Time to relax, a short walk with the dog.`);
+        console.log(`Preparing a cosy family lunch, planning for the next week`);
+        console.log(`Time with the family, helping my son prepare for school`);
+        console.log(`Training at the OKTEN programming school`);
+        break;
+
+    default:
+        console.log(`Invalid time value`)
+   }
+
+
+    //     #uwsz1RnTQJ1
+    //     - Користувач вводить або має два числа.
+    //         Потрібно знайти та вивести максимальне число з тих двох .
+    //         Також потрібно врахувати коли введені рівні числа.
+
+
+    let a = 0;
+    let b = 0;
+
+    if (a>b){
+        console.log(a);
+    } else if (a<b){
+        console.log(b);
+    } else if (a === b){
+        console.log(`===`);
+    }
+
+
+    //         #iBvqtjEm
+    //     - є змінна х, яка може прийняти будь-яке значення (стрінг, число,
+    //         undefined, null  і тд включно). Напишіть код який,
+    //         буде присвоювати змінній х значення "default"
+    //     якщо ви намагаєтесь присвоїти в неї falsy-значення
+    //     (хибно подібні, тобто ті, які приводиться до false, а це 0 null undefined і тд).
+
+    let x = null;
+    x = x || 'default';
+    console.log(x);
+
+
+    //     #awLXL6TBzg
+    //     - з файлу arrays.js (лежить в папці 2023 plan )
+    //     взяти масив coursesAndDurationArray.
+    //         За допомоги іф перевірити кожен його елемент на тривалість навчання.
+    //         У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
+
+    let coursesAndDurationArray = [
+        {title: 'JavaScript Complex', monthDuration: 5},
+        {title: 'Java Complex', monthDuration: 6},
+        {title: 'Python Complex', monthDuration: 6},
+        {title: 'QA Complex', monthDuration: 4},
+        {title: 'FullStack', monthDuration: 7},
+        {title: 'Frontend', monthDuration: 4}
+    ];
+
+    for (let course of coursesAndDurationArray) {
+        if (course.monthDuration > 5) {
+            console.log("Супер");
+        }
+    }
+</script>
+
+</body>
+</html>
